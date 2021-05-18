@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".RegistrationActivity">
 
     <TextView
         android:id="@+id/tv_title"
@@ -14,9 +14,10 @@
         android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.455"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.25" />
+        app:layout_constraintVertical_bias="0.32" />
 
     <TextView
         android:id="@+id/tv_introduce"
@@ -31,45 +32,42 @@
 
     <EditText
         android:id="@+id/et_parentName"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="30dp"
-        android:hint="@string/parent_s_name"
-        android:inputType="text"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_introduce" />
+        app:layout_constraintTop_toBottomOf="@id/tv_introduce"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:inputType="text"
+        android:hint="@string/parent_s_name"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="18dp"
+        />
 
     <EditText
         android:id="@+id/et_childName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_parentName"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:inputType="text"
+        android:hint="@string/child_s_name"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:gravity="center_horizontal"
+        />
+
+    <Button
+        android:id="@+id/btn_dateOfBirth"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="30dp"
-        android:hint="@string/child_s_name"
-        android:inputType="text"
-        android:textColor="@color/black"
-        android:textSize="24sp"
+        android:text="@string/child_s_date_of_birth"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_parentName" />
-
-   <Button
-       android:id="@+id/btn_dateOfBirth"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:text="@string/child_s_date_of_birth"
-       app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintTop_toBottomOf="@id/et_childName"
-       app:layout_constraintEnd_toEndOf="parent"
-       android:layout_marginStart="30dp"
-       android:layout_marginEnd="30dp"
-       android:layout_marginTop="16dp"
-       />
+        app:layout_constraintTop_toBottomOf="@id/et_childName" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

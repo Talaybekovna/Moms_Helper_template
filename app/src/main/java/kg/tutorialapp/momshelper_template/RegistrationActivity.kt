@@ -9,7 +9,7 @@ import android.widget.DatePicker
 import java.text.SimpleDateFormat
 import java.util.*
 
-class MainActivity : AppCompatActivity() {
+class RegistrationActivity : AppCompatActivity() {
 
     lateinit var btn_date: Button
     val cal = Calendar.getInstance()
@@ -17,9 +17,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-
+        setContentView(R.layout.activity_registration)
         btn_date = findViewById(R.id.btn_dateOfBirth)
         setup()
     }
@@ -36,11 +34,11 @@ class MainActivity : AppCompatActivity() {
 
         btn_date.setOnClickListener(object: View.OnClickListener{
             override fun onClick(v: View?) {
-                DatePickerDialog(this@MainActivity,
+                DatePickerDialog(this@RegistrationActivity,
                         dateSetListener,
-                cal.get(Calendar.YEAR),
-                cal.get(Calendar.MONTH),
-                cal.get(Calendar.DAY_OF_MONTH)).show()
+                        cal.get(Calendar.YEAR),
+                        cal.get(Calendar.MONTH),
+                        cal.get(Calendar.DAY_OF_MONTH)).show()
             }
         })
     }
