@@ -45,7 +45,7 @@ class RegistrationActivity : AppCompatActivity() {
 
     private fun updateDateInView() {
         val myFormat = "dd/MM/yyyy"
-        val sdf = SimpleDateFormat(myFormat, Locale.US)
+        val sdf = SimpleDateFormat(myFormat, Locale.US) // add KG ?
         dateOfBirth = sdf.format(cal.time)
     }
 }
