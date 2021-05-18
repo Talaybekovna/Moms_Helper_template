@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Mom\'s Helper_template</string>
+    <string name="welcome">Welcome Dear Parent,</string>
+    <string name="introduce">Please, introduce Yourself:</string>
+    <string name="parent_s_name">Parent\'s name</string>
+    <string name="child_s_name">Child\'s name</string>
+    <string name="child_s_date_of_birth">Child\'s date of birth</string>
 </resources>
